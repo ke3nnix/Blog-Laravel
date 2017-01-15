@@ -1,9 +1,13 @@
 @extends('main')
 
-@section('titulo' , '| Ver entrada')
+@section('titulo' , 'Ver entrada')
 
 @section('contenido')
 
-	<p class="lead">This is the blog post</p>
+	<h1>{{ $post->titulo }}</h1>
+
+	<hr>
+
+	<p class="lead">{{ $post->cuerpo }}</p>
 
 @endsection
