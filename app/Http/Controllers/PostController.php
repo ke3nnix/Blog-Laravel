@@ -49,7 +49,7 @@ class PostController extends Controller
 
         $post->save();
 
-        Session::flash('success' , 'La entrada fue exitosamente guardada!');
+        Session::flash('exito' , 'La entrada fue exitosamente guardada!');
 
 
         // Redireccionamos a otra vista
