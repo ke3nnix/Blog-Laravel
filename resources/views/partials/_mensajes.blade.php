@@ -1,4 +1,4 @@
-@if(Session::has('success'))
+@if(Session::has('exito'))
 	
 	<div class="alert alert-success" role="alert">
 		<strong>Éxito:</strong> {{Session::get('exito')}}
