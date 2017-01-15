@@ -14,6 +14,8 @@
 
     <div class="container">
 
+      @include('partials._mensajes')
+
       @yield('contenido')
 
       @include('partials._footer')
