@@ -1,3 +1,3 @@
 <hr>
 
-<p class="text-center">Copyrights HCK. Todos los derechos reservados</p>
+<p class="text-center">Copyright HCK. Todos los derechos reservados</p>
