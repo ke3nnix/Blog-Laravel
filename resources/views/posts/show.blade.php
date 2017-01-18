@@ -31,17 +31,25 @@
 				<hr>
 				<div class="row">
 					<div class="col-sm-6">
-						{!! Html::linkRoute('posts.edit' , 'editar' , array($post->id) , array('class' => 'btn btn-primary btn-block')) !!}
+						{!! Html::linkRoute('posts.edit' , 'Editar' , array($post->id) , array('class' => 'btn btn-primary btn-block')) !!}
 					</div>
 					<div class="col-sm-6">
 						{!! Form::Open(['route'=>['posts.destroy', $post->id], 'method'=> 'DELETE']) !!}
 
-						{{  Form::submit('eliminar', ['class' => 'btn btn-danger btn-block'])}}
+						{{  Form::submit('Eliminar', ['class' => 'btn btn-danger btn-block'])}}
 
 
 						{!! Form::close() !!}
 					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						{!! Html::linkRoute('posts.index' , 'Ver todas las entradas' , array() , array('class' => 'btn btn-default btn-block', 'style' => 'margin-top: 10px;')) !!}
 					</div>
+
+					
+				</div>
 
 			</div>
 
