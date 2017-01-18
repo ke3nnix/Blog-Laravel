@@ -33,7 +33,7 @@
 						<tr>
 							<th>{{ $post->id }}</th>
 							<td>{{ $post->titulo }}</td>
-							<td>{{ substr($post->cuerpo, 0, 30)}}{{ strlen($post->cuerpo) > 15 ? "..." : "" }}</td>
+							<td>{{ substr($post->cuerpo, 0, 50)}}{{ strlen($post->cuerpo) > 15 ? "..." : "" }}</td>
 							<td>{{ date("M j, Y", strtotime($post->created_at)) }}</td>
 							<td>
 								<a href="{{ route('posts.show', $post->id) }}" class="btn btn-default btn-sm">ver</a>
@@ -42,8 +42,14 @@
 						</tr>
 
 					@endforeach
+
 				</tbody>
 			</table>
+
+			<div class="text-center">
+				{!! $posts->links(); !!}
+			</div>
+
 		</div>
 	</div>
 

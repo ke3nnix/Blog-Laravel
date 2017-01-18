@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+
 Class PaginasController extends Controller {
 
 	public function  getInicio()
 	{
-		return view('paginas.welcome');
+		$posts = Post::orderBy('id' , 'desc')->take(5)->get();
+		return view('paginas.welcome')->withPosts($posts);
 	}
 
 	public function getAcercaDe()
