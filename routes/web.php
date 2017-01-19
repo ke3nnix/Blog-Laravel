@@ -13,6 +13,8 @@
 
 Route::get('blog/{slug}', ['as' => 'blog.individual', 'uses' => 'BlogController@getIndividual'])->where('slug', '[\w\d\-\_]+'); // regular expresion: w:word d:digit 
 
+Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
+
 Route::get('contacto', 'PaginasController@getContacto');
 
 Route::get('acerca-de', 'PaginasController@getAcercaDe');
