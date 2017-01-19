@@ -20,6 +20,9 @@
 				{{ Form::label('titulo', 'Título:') }}
 				{{ Form::text('titulo' , null, array('class'=> 'form-control','required' => '', 'maxlength' => '255')) }}
 
+				{{ Form::label('slug', 'Slug:') }}
+				{{ Form::text('slug' , null, array('class'=> 'form-control','required' => '', 'maxlength' => '255', 'minlength' => '5')) }}
+
 				{{ Form::label('cuerpo', 'Texto de la entrada:', array('style' => 'margin-top: 20px;'))}}
 				{{ Form::textarea('cuerpo', null, array('class' => 'form-control', 'required' => ''))}}
 

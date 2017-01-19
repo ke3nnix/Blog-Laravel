@@ -21,7 +21,7 @@
                 
                     <div class="post">
                         <h3>{{ $post->titulo }}</h3>
-                        <p>{{ substr($post->cuerpo, 0, 350) . "..." }}</p><a href="#" class="btn btn-primary">Leer más</a>
+                        <p>{{ substr($post->cuerpo, 0, 350) . "..." }}</p><a href="{{url('blog',$post->slug)}}" class="btn btn-primary">Leer más</a>
                     </div>
 
                 @endforeach

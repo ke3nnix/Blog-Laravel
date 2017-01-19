@@ -20,13 +20,18 @@
 			<div class="well">
 				
 				<dl class="dl-horizontal">
-					<dt>Creado: </dt>
-					<dd>{{ date("M j, Y g:i a", strtotime($post->created_at)) }}</dd>
+					<label>URL: </label>
+					<p><a href="{{ url('blog', $post->slug) }}">{{ url('blog', $post->slug) }}</a></p>
 				</dl>
 
 				<dl class="dl-horizontal">
-					<dt>Actualizado: </dt>
-					<dd>{{ date("M j, Y g:i a", strtotime($post->updated_at)) }}</dd>
+					<label>Creado: </label>
+					<p>{{ date("M j, Y g:i a", strtotime($post->created_at)) }}</p>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<label>Actualizado: </label>
+					<p>{{ date("M j, Y g:i a", strtotime($post->updated_at)) }}</p>
 				</dl>
 				<hr>
 				<div class="row">
