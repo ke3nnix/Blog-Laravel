@@ -14,6 +14,10 @@
 			
 			{{ Form::text('titulo' , null, ["class" => 'form-control input-lg']) }}
 
+			{{ Form::label('slug', 'Slug:', ["style" => 'margin-top:20px;']) }}
+
+			{{ Form::text('slug' , null, ["class" => 'form-control']) }}
+
 			{{ Form::label('cuerpo' , 'Cuerpo del mensaje:', ["style" => 'margin-top:20px;']) }}
 
 			{{ Form::textarea('cuerpo', null, ["class" => 'form-control']) }}

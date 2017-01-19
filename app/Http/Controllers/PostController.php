@@ -40,12 +40,14 @@ class PostController extends Controller
         // Validando la data
         $this->validate($request , array(
                 'titulo' => 'required|max:255',
-                'cuerpo' => 'required'            
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'cuerpo' => 'required'
             ));
 
         // Almacenamos los datos
         $post = new Post;
         $post->titulo = $request->titulo;
+        $post->slug = $request->slug;
         $post->cuerpo = $request->cuerpo;
 
         $post->save();
@@ -94,11 +96,13 @@ class PostController extends Controller
         // Validar la data
         $this->validate($request , array(
                 'titulo' => 'required|max:255',
-                'cuerpo' => 'required'            
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'cuerpo' => 'required'
             ));
         // guardar la informaçión en la BD
         $post = Post::find($id);
         $post->titulo = $request->input('titulo');
+        $post->slug =$request->input('slug');
         $post->cuerpo = $request->input('cuerpo');
         $post->save();
         // setear el mensaje FLASH de exito
